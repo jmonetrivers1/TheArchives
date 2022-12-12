@@ -5,6 +5,7 @@ using TMPro;
 
 public class ButtonActivity : MonoBehaviour
 {
+    //Script for the tab ui (Combat, Spells, Tools, etc.)
     public TMP_Text TextComponent;
     public TMP_Text[] UnselectedTextComponent;
     public Color SelectedColor;

@@ -3,38 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //This is the draft base script for the PC (Player Character)
-public class PlayerCharacter : MonoBehaviour
+public class PlayerCharacter
 {
-    //PlayerCharacter Variables
-        //Player Stats
-        public class playerStats{
-            public int str = 0;
-            public int dex = 0;
-            public int con = 0;
-            public int intel = 0;
-            public int wis = 0;
-            public int cha = 0;
-    }
-        public class playerFlavor{
-            public string primaryClass = "";
-            public string race = "";
-            public string alignment = "";
-            public string background = "";
-        }
-        //public string[] languages = new string[]; //?
-
-        public float exp = 0;
-        public int totalLevel = 0;
-        public int armorClass = 0;  //do calculation for them?
-        public int speed = 0;
-        public int intiative = 0;
-
-
-
-
-    //debug function to relay character information
-    public void PlayerInformationDebug(){
-        Debug.Log("Test");
-        }
+    /*            Stat Order --> (6 stats)
+                    STR (0)         DEX(1) 
+                    CON (2)         INT(3) 
+                    WIS (4)         CHA(5)
+    */
+    //stat enum
+    //enum statEnum { STR, DEX, CON, INTEL, WIS,CHA };
+    //stat array(6 stats)
+    public string characterName;
+    public stat[] statValues = new stat[6];
+    public SavingThrows[] savingTValues = new SavingThrows[6];
+    public Health healthValues= new Health();
 
 }
+
+

@@ -19,7 +19,23 @@ public class CharacterSheet : MonoBehaviour
     public int wisModifier = 0;
     public int chaModifier = 0;
 
-    //Modifier Update --> updates mod values with current player stats
+    //flavor
+    public string primaryClass = "";
+    public string race = "";
+    public string alignment = "";
+    public string background = "";
+
+    public double exp = 0;
+    public int totalLevel = 0;
+    public int armorClass = 0;  //do calculation for them?
+    public int speed = 0;
+    public int intiative = 0;
+
+
+    //FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /* Modifier Update --> updates mod values with current player stats
+    /
+    */
     public void modUpdate(int value)
     {
         switch (value)
@@ -43,7 +59,9 @@ public class CharacterSheet : MonoBehaviour
                 chaModifier = statTranslate(cha);
                 break;
         }
-}
+    }
+
+    //converts stats into modifiers (ex +1)
     public int statTranslate(int value)
     {
         if (value == 1)
